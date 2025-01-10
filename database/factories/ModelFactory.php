@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Database\Factories;
+namespace MoonlyDays\Crowdin\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

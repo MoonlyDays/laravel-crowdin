@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace MoonlyDays\Crowdin\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class CrowdinCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-crowdin';
 
     public $description = 'My command';
 
