@@ -1,5 +1,8 @@
 <?php
 
+use MoonlyDays\Crowdin\Crowdin;
+
 it('can test', function () {
-    expect(true)->toBeTrue();
+    $crowdin = app(Crowdin::class);
+    dd($crowdin->projects()->get());
 });
