@@ -8,7 +8,7 @@ class Storages extends Service
 {
     public function list(?int $limit, ?int $offset)
     {
-        return $this->request()
+        return $this->newRequest()
             ->withQueryParameters(compact('limit', 'offset'))
             ->get('storages');
     }

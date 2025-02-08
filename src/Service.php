@@ -10,7 +10,7 @@ class Service
         protected Crowdin $crowdin
     ) {}
 
-    protected function request(): PendingRequest
+    protected function newRequest(): PendingRequest
     {
         return $this->crowdin->request();
     }

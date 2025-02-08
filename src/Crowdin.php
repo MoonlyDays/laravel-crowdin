@@ -7,14 +7,14 @@ use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
-use MoonlyDays\Crowdin\Services\Projects;
+use MoonlyDays\Crowdin\Services\ProjectService;
 use MoonlyDays\Crowdin\Services\SourceFileService;
 use MoonlyDays\Crowdin\Services\Storages;
 
 /**
  * @method Storages storages()
- * @method Projects projects()
- * @method SourceFileService sourceFiles()
+ * @method ProjectService projects()
+ * @method SourceFileService sourceFiles(int $projectId)
  */
 class Crowdin
 {
@@ -39,16 +39,6 @@ class Crowdin
         }
 
         throw new InvalidArgumentException('Invalid Crowdin API service');
-    }
-
-    public function projectId(): string
-    {
-        return $this->projectId;
-    }
-
-    public function apiKey(): string
-    {
-        return $this->apiKey;
     }
 
     public function request(): PendingRequest

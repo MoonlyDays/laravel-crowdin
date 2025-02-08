@@ -6,7 +6,7 @@ use Illuminate\Http\Client\ConnectionException;
 use MoonlyDays\Crowdin\Resources\Project;
 use MoonlyDays\Crowdin\Service;
 
-class Projects extends Service
+class ProjectService extends Service
 {
     /**
      * @throws ConnectionException
@@ -14,7 +14,7 @@ class Projects extends Service
     public function get(int $projectId): Project
     {
         return new Project(
-            $this->request()->get("projects/$projectId")
+            $this->newRequest()->get("projects/$projectId")
         );
     }
 }
